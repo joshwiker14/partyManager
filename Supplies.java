@@ -2,7 +2,7 @@ public class Supplies
 {
    private String Item;
    private int Amount;
-   private String WhatsItFor;
+   private String whatsItFor;
    // party favor, food, decorations, cany, etc.
    private String ItemType;
    //constructor
@@ -29,12 +29,12 @@ public class Supplies
    
    public void setWhatsItFor(String myPurpose)
    {
-      WhatsItFor = myPurpose;
+      whatsItFor = myPurpose;
    }
    
    public String getWhatsItFor()
    {
-      return WhatsItFor;
+      return whatsItFor;
    }
    
    public void setItemType(String myType)
