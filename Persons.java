@@ -1,11 +1,10 @@
-
-public class People {
+public class Persons {
 	
 	private String fullName;
 	private String disLikes;
 	private String likes;
     // constructor
-	public People(String fName, String lName){
+	public Ppersons(String fName, String lName){
 		fullName = fName + " " + lName; 
 	}
 
