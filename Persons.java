@@ -1,35 +1,51 @@
-public class Persons {
+import java.util.ArrayList;
+
+
+public class Perssons {
 	
 	private String fullName;
-	private String disLikes;
-	private String likes;
-    // constructor
-	public Ppersons(String fName, String lName){
+	private ArrayList<String> likes;
+	private ArrayList<String> dislikes;
+
+	public People(String fName, String lName){
 		fullName = fName + " " + lName; 
 	}
-
-	public void setfullName (String name, String name2){
+	
+	public void setFullName (String name, String name2){
 		this.fullName = name+ " " + name2;
 	}
 	
-	public void setdisLike (String food){
-		this.disLikes = food;
+	public ArrayList<String> getLikesList() {
+		return dislikes;
 	}
 	
-	public void setlikes (String food2){
+	public void setLikes (ArrayList<String> food2){
 		this.likes = food2;
 	}
 	
-	public String getdislikes(){
-		return this.likes;
-	}
-	
-	public String getfullName(){
+	public String getFullName(){
 		return this.fullName;
 	}
 	
-	public String getdisLikes(){
-		return this.disLikes;
+	public ArrayList<String> getDislikesList() {
+		return dislikes;
+	}
+
+	public void setDislikes(ArrayList<String> dislikes) {
+		this.dislikes = dislikes;
+	}
+	public void addLike(String food){
+		likes.add(food);
+	}
+	public void removeLike(String food){
+		likes.remove(food);
 	}
 	
+	public void addDislike(String food) {
+		dislikes.add(food);
+	}
+	
+	public void removeDislike(String food) {
+		dislikes.remove(food);
+	}
 }
