@@ -1,4 +1,4 @@
-Enter file contents hereimport java.util.Scanner;
+import java.util.Scanner;
 
 public class PersonsTest
 {
