@@ -1,0 +1,46 @@
+Enter file contents hereimport java.util.Scanner;
+
+public class PersonsTest
+{
+   public static void main(String[] args)
+   {
+      Scanner input = new Scanner(System.in);
+      
+      
+      System.out.print("First name: ");
+      String firstName = input.nextLine();
+      
+      System.out.print("Last name: ");
+      String lastName = input.nextLine();
+      
+      System.out.print("Dislikes: ");
+      String Dislike = input.nextLine();
+      
+      System.out.print("Likes: ");
+      String Like = input.nextLine();
+      
+      // Persons names = new Persons(firstName, lastName);
+//       
+//       
+//       names.setLikes(Like);
+//       names.setDislikes(Dislike);
+//       
+//       String fullName = firstName + " " + lastName;
+//       //verification
+//       if (person.getDislike() != Dislike)
+//       {
+//          
+//       }
+//       
+//       if (person.getLike() != Like)
+//       {
+//          
+//       }
+//       
+//       if (person.getFullName() != fullname)
+//       {
+//       
+//       }
+// 
+    }
+}
