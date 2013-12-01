@@ -16,7 +16,7 @@ public class Persons {
 	}
 	
 	public ArrayList<String> getLikesList() {
-		return dislikes;
+		return Likes;
 	}
 	
 	public void setLikes (ArrayList<String> food2){
