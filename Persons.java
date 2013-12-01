@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 
-public class Perssons {
+public class Persons {
 	
 	private String fullName;
 	private ArrayList<String> likes;
