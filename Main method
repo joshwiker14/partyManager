@@ -19,28 +19,27 @@ public class PersonsTest
       System.out.print("Likes: ");
       String Like = input.nextLine();
       
-      // Persons names = new Persons(firstName, lastName);
-//       
-//       
-//       names.setLikes(Like);
-//       names.setDislikes(Dislike);
-//       
-//       String fullName = firstName + " " + lastName;
-//       //verification
-//       if (person.getDislike() != Dislike)
-//       {
-//          
-//       }
-//       
-//       if (person.getLike() != Like)
-//       {
-//          
-//       }
-//       
-//       if (person.getFullName() != fullname)
-//       {
-//       
-//       }
-// 
+      Persons person = new Persons(firstName, lastName);
+      
+      person.setLikes(Like);
+      person.setDislikes(Dislike);
+     
+      String fullName = firstName + " " + lastName;
+      //verification
+      if (person.getDislike() != Dislike)
+      {
+         System.out.print("Dislike:%d%n " person.getDislike());
+      }
+      
+      if (person.getLike() != Like)
+      {
+         System.out.print("Like:%d%n " person.getLike()); 
+      }
+      
+      if (person.getFullName() != fullname)
+      {
+         System.out.print("Full Name:%d%n " person.getFullName());
+      }
+
     }
 }
