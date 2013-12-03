@@ -5,12 +5,8 @@ import java.util.ArrayList;
 
 public class PartyManager {
 
-    //private ArrayList<Persons> attendees;
-    //private ArrayList<Supplies> supplies;
-
     public static void main(String[] args) {
 
-        
         ArrayList<Persons> attendees = new ArrayList<>();
         ArrayList<Supplies> supplies = new ArrayList<>();
         Scanner input = new Scanner(System.in);

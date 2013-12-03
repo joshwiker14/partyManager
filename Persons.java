@@ -8,7 +8,13 @@ public class Persons {
     private ArrayList<String> likes;
     private ArrayList<String> dislikes;
 
+    public Persons() {
+        likes = new ArrayList<>();
+        dislikes = new ArrayList<>();
+    }
     public Persons(String fName, String lName) {
+        likes = new ArrayList<>();
+        dislikes = new ArrayList<>();
         setFullName(fName, lName);
     }
 

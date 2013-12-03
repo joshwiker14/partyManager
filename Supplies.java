@@ -17,7 +17,7 @@ public class Supplies {
      * @param amount
      * @param whatsItFor
      */
-        public Supplies(String item,String itemType, int amount, String whatsItFor)
+    public Supplies(String item,String itemType, int amount, String whatsItFor)
     {
         this.item = item;
         this.itemType = itemType;
