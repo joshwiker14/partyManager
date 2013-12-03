@@ -5,8 +5,11 @@ import java.util.ArrayList;
 
 public class PartyManager {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
-
         ArrayList<Persons> attendees = new ArrayList<>();
         ArrayList<Supplies> supplies = new ArrayList<>();
         Scanner input = new Scanner(System.in);
@@ -27,7 +30,7 @@ public class PartyManager {
             while (loadingLikes) {
                 System.out.print("Likes (blank line to end): ");
                 String like = input.nextLine();
-                if (like.equals("")) {
+                if (like.isEmpty()) {
                     loadingLikes = false;
                 } else {
                     person.addLike(like);
@@ -37,7 +40,7 @@ public class PartyManager {
             while (loadingDislikes) {
                 System.out.print("Dislikes (blank line to end): ");
                 String dislike = input.nextLine();
-                if (dislike.equals("")) {
+                if (dislike.isEmpty()) {
                     loadingDislikes = false;
                 } else {
                     person.addDislike(dislike);
@@ -46,7 +49,7 @@ public class PartyManager {
 
             attendees.add(person);
 
-            System.out.print("any more people (y/n)? ");
+            System.out.print("\nAny more people (y/n)? ");
             String more = input.nextLine();
 
             loadingPeople = (more.equals("y"));
@@ -54,17 +57,22 @@ public class PartyManager {
 
         // create supplies based on likes and dislikes
         // dump list of attendees
-        System.out.print("\nParty Attendees:\n");
+        System.out.println("\n\nParty Attendees:");
         for(Persons person: attendees) {
-	    System.out.print(person.getFullName());
-            System.out.print("\n");
+	    System.out.println(person.getFullName());
         }
 
         // dump list of supplies people like
-        System.out.print("\nPeople's Likes:\n");
-
+        System.out.println("\nPeople's Likes:");
+        for(Persons person: attendees) {
+            System.out.println(person.getLikesList());
+        }
+        
         // dump list of supplies people don't like
-        System.out.print("\nPeople's Dislikes:\n");
+        System.out.println("\nPeople's Dislikes:");
+        for(Persons person: attendees) {
+            System.out.println(person.getDislikesList());
+        }
     }
 
 }
