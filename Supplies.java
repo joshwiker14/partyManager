@@ -9,11 +9,12 @@ public class Supplies {
     private String item;
     private int amount;
     private String whatsItFor;
-    // party favor, food, decorations, cany, etc.
+    // party favor, food, decorations, candy, etc.
     private String itemType;
     
-    //constructor
-
+    //constructors
+    public Supplies(){}
+    
     /**
      *
      * @param item

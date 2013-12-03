@@ -55,7 +55,61 @@ public class PartyManager {
             loadingPeople = (more.equals("y"));
         }
 
-        // create supplies based on likes and dislikes
+        // create supplies
+        boolean gettingSupplies = false;
+        boolean gettingDescription = true;
+        
+        System.out.println("\nLet's add some supplies.");
+        do
+        {
+            Supplies supply = new Supplies();
+            String name;
+            int amount;
+            String type;
+            String description;
+            String descriptionLine;
+            
+            System.out.print("New supply name: ");
+            name = input.nextLine();
+            supply.setItem(name);
+            
+            System.out.print("What kind of supply?: ");
+            type = input.nextLine();
+            supply.setItemType(type);
+            
+            System.out.print("How many?: ");
+            amount = input.nextInt();
+            supply.setAmount(amount);
+            input.nextLine();
+            
+            description = "";
+            do
+            {
+                System.out.print("What is it for?: ");
+                descriptionLine = input.nextLine();
+                
+                if(descriptionLine.isEmpty())
+                {
+                    gettingDescription = false;
+                }
+                else
+                {
+                    description += descriptionLine;
+                }
+            }
+            while(gettingDescription == true);
+            
+            supplies.add(supply);
+            
+            System.out.print("Any more supplies?(y/n): ");
+            String more = input.nextLine();
+            if(more.equals("n"))
+            {
+                gettingSupplies = false;
+            }
+        }
+        while(gettingSupplies == true);
+        
         // dump list of attendees
         System.out.println("\n\nParty Attendees:");
         for(Persons person: attendees) {
@@ -73,6 +127,8 @@ public class PartyManager {
         for(Persons person: attendees) {
             System.out.println(person.getDislikesList());
         }
+        
+        // Print supplies
     }
 
 }
